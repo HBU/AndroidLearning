@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
     public BDLocationListener BaiDuListener = new MylocationListener();
     public LocationClient mLocationClient = null;
     private TextView positionText;
-    private RadioButton rbtnGPS;
-    private RadioButton rbtnNet;
+    private RadioButton RadioButtonGPS;
+    private RadioButton RadioButtonNet;
 
     private Button btnRefresh;
     private MapView mapView;
@@ -56,15 +56,15 @@ public class MainActivity extends AppCompatActivity {
 
         mapView = (MapView)findViewById(R.id.bmapView);
         positionText  =(TextView)findViewById(R.id.position_text_view);
-        rbtnGPS = (RadioButton)findViewById(R.id.radioGPS);
-        rbtnNet = (RadioButton)findViewById(R.id.radioNET);
+        RadioButtonGPS = (RadioButton)findViewById(R.id.radioGPS);
+        RadioButtonNet = (RadioButton)findViewById(R.id.radioNET);
 
         btnRefresh = (Button)findViewById(R.id.btn_refresh);
-        rbtnNet.setClickable(false);//Forbidden radiobutton can be clicked
-        rbtnGPS.setClickable(false);
+        RadioButtonNet.setClickable(false);//Forbidden RadioButton can be clicked
+        RadioButtonGPS.setClickable(false);//Forbidden RadioButton can be clicked
 
-        baiduMap = mapView.getMap();//获取地图的总控制器BaiduMap类的实例
-        // 有了BiaduMap类的实例，就可以对地图进行各种各样的操作，比如设置地图的缩放级别以及将地图移动到某一个经纬度上。
+        baiduMap = mapView.getMap();//获取地图的总控制器 BaiDuMap 类的实例
+        // 有了BiaDuMap类的实例，就可以对地图进行各种各样的操作，比如设置地图的缩放级别以及将地图移动到某一个经纬度上。
         baiduMap.setMyLocationEnabled(true);//取消百度地图让”我”显示在地图上的限制
         btnRefresh.setOnClickListener(lisenter);
         List<String> permissionList = new ArrayList<>();// Permission array list , request permissions in one array.
@@ -170,8 +170,8 @@ public class MainActivity extends AppCompatActivity {
             Log.d("map Listener",location.getLocType()+"");
             if(location.getLocType() == BDLocation.TypeGpsLocation){   // GPS定位结果
                 Log.d("map test","GPS");
-                rbtnGPS.setChecked(true);
-                rbtnNet.setChecked(false);
+                RadioButtonGPS.setChecked(true);
+                RadioButtonNet.setChecked(false);
                 currentPosition.append("[卫星数量]");
                 currentPosition.append(location.getSatelliteNumber());    //获取卫星数
                 currentPosition.append("\n[速度]");
@@ -187,8 +187,8 @@ public class MainActivity extends AppCompatActivity {
                 navigateTo(location);
             }else if (location.getLocType() == BDLocation.TypeNetWorkLocation){  // Net定位结果
                 Log.d("map test","net");
-                rbtnNet.setChecked(true);
-                rbtnGPS.setChecked(false);
+                RadioButtonNet.setChecked(true);
+                RadioButtonGPS.setChecked(false);
                 currentPosition.append("[地址]");
                 currentPosition.append(location.getAddrStr());    //获取地址信息
                 currentPosition.append("\n[运营商]");
