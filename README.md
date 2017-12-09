@@ -1,2 +1,2 @@
 # AndroidTest
-### 百度地图测试 LBSTest
+### 百度地图测试 LBStest
