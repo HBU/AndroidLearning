@@ -8,10 +8,13 @@
 
     <Button
         android:id="@+id/button"
+        style="@android:style/Widget.Holo.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="变背景"
-        android:onClick="ChangeBackground"/>
+        android:onClick="ChangeBackground"
+        android:text="Click Me !!!"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
 
 
 
