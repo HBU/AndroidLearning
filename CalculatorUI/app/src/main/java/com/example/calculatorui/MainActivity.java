@@ -30,14 +30,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
-//                    case R.id.action_search:
-//                        Toast.makeText(MainActivity.this, "Search !", Toast.LENGTH_SHORT).show();
-//                        break;
-//                    case R.id.action_notifications:
-//                        Toast.makeText(MainActivity.this, "Notification !", Toast.LENGTH_SHORT).show();
-//                        break;
+
                     case R.id.action_settings:
-                        Toast.makeText(MainActivity.this, "Settings !", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "功能1 !", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_settings1:
+                        Toast.makeText(MainActivity.this, "功能2 !", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_settings2:
+                        Toast.makeText(MainActivity.this, "功能3 !", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_settings3:
+                        Toast.makeText(MainActivity.this, "功能4 !", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_settings4:
+                        Toast.makeText(MainActivity.this, "功能5 !", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_settings5:
+                        Toast.makeText(MainActivity.this, "功能6 !", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 return true;
