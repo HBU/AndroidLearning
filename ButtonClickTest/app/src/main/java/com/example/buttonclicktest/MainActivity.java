@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 //ref：https://www.cnblogs.com/releasing/p/5236806.html
+//内容源自上方链接，详细解释可以看帖子
 public class MainActivity extends AppCompatActivity {
 
     @Override
