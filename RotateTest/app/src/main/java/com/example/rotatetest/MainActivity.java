@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_port);
     }
-    //布局为不按照layout-land和layout-port目录，而自定义名字时
+    //布局为不按照layout-land和layout-port目录，而自定义名字时, xml文件放到layout文件夹也可以
     @Override
 
     public void onConfigurationChanged (Configuration newConfig){
