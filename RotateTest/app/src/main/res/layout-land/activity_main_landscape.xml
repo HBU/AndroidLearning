@@ -4,16 +4,22 @@
     android:stretchColumns="*"
     android:layout_height="match_parent"
     android:background="@color/white">
-
+    <TextView
+        android:id="@+id/textviewdavid"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:gravity="right"
+        android:textSize="30sp"
+        android:text="TEXT"/>
     <EditText
         android:id="@+id/editviewdavid"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         android:gravity="right"
-        android:textSize="40sp"
-        android:textColor="@color/white"
-        android:textCursorDrawable="@color/black"
-        android:background="@null"
+        android:textSize="30sp"
+        android:hint="Edit"
+        android:textCursorDrawable="@null"
+
         />
 
     <View
@@ -477,7 +483,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button111"
+            android:id="@+id/button0"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -486,7 +492,7 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button2111"
+            android:id="@+id/buttonPoint"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -495,7 +501,7 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button3111"
+            android:id="@+id/buttonEqual"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
