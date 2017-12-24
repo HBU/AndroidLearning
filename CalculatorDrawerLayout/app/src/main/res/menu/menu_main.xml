@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@drawable/ic_backup"
+        app:showAsAction="always"/>
+    <item android:id="@+id/action_notifications"
+        android:title="notifications"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_settings"
+        android:title="关闭"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="never"/>
+    <item android:id="@+id/action_settings1"
+        android:title="关于"
+        android:orderInCategory="100"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never"/>
+
+
+</menu>
