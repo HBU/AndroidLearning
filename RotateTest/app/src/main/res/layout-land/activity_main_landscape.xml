@@ -413,99 +413,95 @@
             android:background="@color/button_orange"
             android:text="+"
             android:layout_weight="1" />
-
-
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow5"
+        android:id="@+id/tableRow41"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/button40"
+            android:id="@+id/button301"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/button_gray"
             android:text="Rad"
-            android:background="@color/button_gray"
-            android:textSize="15sp"
-            android:layout_weight="1" />
+            android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button41"
+            android:id="@+id/button311"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/button_gray"
             android:text="sinh"
-            android:background="@color/button_gray"
-            android:textSize="15sp"
-            android:layout_weight="1"/>
+            android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button42"
+            android:id="@+id/button321"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/button_gray"
             android:text="cosh"
-            android:background="@color/button_gray"
-            android:textSize="15sp"
-            android:layout_weight="1"/>
+            android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button43"
+            android:id="@+id/button331"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/button_gray"
             android:text="tanh"
-            android:background="@color/button_gray"
-            android:textSize="15sp"
-            android:layout_weight="1"/>
+            android:textSize="15sp" />
+
 
         <Button
-            android:id="@+id/button44"
+            android:id="@+id/buttonPlus1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="π"
+            android:layout_weight="1"
             android:background="@color/button_gray"
-            android:textSize="15sp"
-            android:layout_weight="1"/>
+            android:text="n"
+            android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button45"
+            android:id="@+id/button351"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="Rand"
+            android:layout_weight="1"
             android:background="@color/button_gray"
-            android:textSize="15sp"
-            android:layout_weight="1"/>
+            android:text="rand"
+            android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button0"
+            android:id="@+id/button111"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_span="2"
+            android:layout_weight="2"
             android:background="@color/button_orange"
             android:text="0"
-            android:textSize="20sp"
-            android:layout_weight="1" />
+            android:textSize="20sp" />
 
         <Button
-            android:id="@+id/buttonPoint"
+            android:id="@+id/button2111"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_span="2"
+            android:layout_weight="1"
             android:background="@color/button_orange"
             android:text="."
-            android:textSize="20sp"
-            android:layout_weight="1" />
+            android:textSize="20sp" />
 
         <Button
-            android:id="@+id/buttonEqual"
-            android:textSize="20sp"
-            android:layout_span="2"
+            android:id="@+id/button3111"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@color/button_orange"
             android:text="="
-            android:layout_weight="1"/>
+            android:textSize="20sp" />
 
     </TableRow>
 
