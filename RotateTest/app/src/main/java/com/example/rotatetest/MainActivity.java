@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         int mCurrentOrientation = getResources().getConfiguration().orientation;
         if ( mCurrentOrientation == Configuration.ORIENTATION_PORTRAIT ) {// If current screen is portrait
             setContentView(R.layout.activity_main_port);
-            
+            //此处应考虑读取转屏之前的数据（转屏后全部清空不合理）
             FindViewById();
             ButtonClickListener();
 
