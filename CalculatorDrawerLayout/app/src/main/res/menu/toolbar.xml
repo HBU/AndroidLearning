@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/backup"
+    <item android:id="@+id/action_search"
+        android:title="Search"
         android:icon="@drawable/ic_backup"
-        android:title="Backup"
         app:showAsAction="always"/>
-    <item
-        android:id="@+id/delete"
-        android:icon="@drawable/ic_delete"
-        android:title="Delete"
-        app:showAsAction="ifRoom"/>
-    <item
-        android:id="@+id/settings"
+    <item android:id="@+id/action_notifications"
+        android:title="notifications"
         android:icon="@drawable/ic_settings"
-        android:title="Settings"
+        app:showAsAction="always"/>
+    <item android:id="@+id/action_settings"
+        android:title="关闭"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_settings"
         app:showAsAction="never"/>
+    <item android:id="@+id/action_settings1"
+        android:title="关于"
+        android:orderInCategory="100"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never"/>
+
 </menu>
