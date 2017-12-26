@@ -2,7 +2,7 @@
  
  测试内容 | 项目名称
  -------- | -----------
- 增加侧滑菜单的计算器UI | CalculatorDrawerLayout
+ 计算器UI测试 增加ToolBar和侧滑菜单 | CalculatorDrawerLayout
  侧滑测试 | DrawLayoutTest
  旋转屏幕载入不同Layout布局 | RotateTest
  [监听器的三种实现方法（OnClickListener）](https://www.cnblogs.com/releasing/p/5236806.html) | ButtonClickTest
