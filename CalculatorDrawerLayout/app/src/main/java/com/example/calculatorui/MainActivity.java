@@ -28,47 +28,64 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar,R.string.app_name, R.string.app_name){
-            public void onDrawerClosed(View view) {//抽屉关闭后
-                //getActionBar().setTitle(mDrawerTitle);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-
-            public void onDrawerOpened(View drawerView) {//抽屉打开后
-                //getActionBar().setTitle(mTitle);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-
-            @Override
-            public boolean onOptionsItemSelected(MenuItem item) {
-                if (item != null && item.getItemId() == android.R.id.home) {//actionbar上的home icon
-                    //END即gravity.right 从右向左显示   START即left  从左向右弹出显示
-                    if (mDrawerLayout.isDrawerVisible(GravityCompat.END)) {
-                        mDrawerLayout.closeDrawer(GravityCompat.END);//关闭抽屉
-                    } else {
-                        mDrawerLayout.openDrawer(GravityCompat.END);//打开抽屉
-                    }
-                    return true;
-                }
-                return false;
-            }
-        };
-//        mDrawerLayout.setDrawerListener(mDrawerToggle);//设置抽屉监听
-        mDrawerLayout.addDrawerListener(mDrawerToggle);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        mDrawerToggle.syncState();
+//        ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar,R.string.app_name, R.string.app_name){
+//            public void onDrawerClosed(View view) {//抽屉关闭后
+//                //getActionBar().setTitle(mDrawerTitle);
+//                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+//            }
+//
+//            public void onDrawerOpened(View drawerView) {//抽屉打开后
+//                //getActionBar().setTitle(mTitle);
+//                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+//            }
+//
+//            @Override
+//            public boolean onOptionsItemSelected(MenuItem item) {
+//                if (item != null && item.getItemId() == android.R.id.home) {//actionbar上的home icon
+//                    //END即gravity.right 从右向左显示   START即left  从左向右弹出显示
+//                    if (mDrawerLayout.isDrawerVisible(GravityCompat.END)) {
+//                        mDrawerLayout.closeDrawer(GravityCompat.END);//关闭抽屉
+//                    } else {
+//                        mDrawerLayout.openDrawer(GravityCompat.END);//打开抽屉
+//                    }
+//                    return true;
+//                }
+//                return false;
+//            }
+//        };
+////        mDrawerLayout.setDrawerListener(mDrawerToggle);//设置抽屉监听
+//        mDrawerLayout.addDrawerListener(mDrawerToggle);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setHomeButtonEnabled(true);
+//        mDrawerToggle.syncState();
 
         NavigationView navView = (NavigationView) findViewById(R.id.nav_view);
-//        ActionBar actionBar = getSupportActionBar();
-//        if (actionBar != null) {
-//            actionBar.setDisplayHomeAsUpEnabled(true);
-//            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
-//        }
-        navView.setCheckedItem(R.id.nav_call);
-        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
+        }
+//        navView.setCheckedItem(R.id.nav_call);
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {//抽屉菜单监听 2017.12.27
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
+                 switch (item.getItemId()) {
+                    case R.id.nav_call:
+                        Toast.makeText(MainActivity.this,"Call me",Toast.LENGTH_SHORT).show();
+                        break;
+                     case R.id.nav_friends:
+                         Toast.makeText(MainActivity.this,"nav_friends",Toast.LENGTH_SHORT).show();
+                         break;
+                     case R.id.nav_location:
+                         Toast.makeText(MainActivity.this,"nav_location",Toast.LENGTH_SHORT).show();
+                         break;
+                     case R.id.nav_mail:
+                         Toast.makeText(MainActivity.this,"nav_mail",Toast.LENGTH_SHORT).show();
+                         break;
+                     case R.id.nav_task:
+                         Toast.makeText(MainActivity.this,"nav_task",Toast.LENGTH_SHORT).show();
+                         break;
+                }
                 mDrawerLayout.closeDrawers();
                 return true;
             }
