@@ -1,6 +1,6 @@
 # 计算器1.0
 ##### Android studio 3.0.1 / Gradle 4.1
-- 在简单计算器的基础上，优化UI   
+- 在[简单计算器](https://github.com/HBU/AndroidDemo/tree/master/chapter05/CalculatorDemo)的基础上，优化UI   
 - 增加了Toast、Dialog的使用
 - 学习并增加了ToolBar，DrawerLayout    
 - Ref：郭霖《第一行代码（第2版）》
