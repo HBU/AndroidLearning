@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setIcon(R.mipmap.logo)
                         .setTitle("计算器")
-                        .setMessage("计算器 1.0 \n河北大学 \n网络空间安全与计算机学院 \nDavid \n2017.12.24")
+                        .setMessage("计算器 1.0 \n河北大学 \n网络空间安全与计算机学院 \nDavid \n2017.12.31")
                         .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                             }
