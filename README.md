@@ -2,6 +2,7 @@
  
  测试内容 | 项目名称
  -------- | -----------
+ 【计算器1.0】发布 | MyCalculator
  计算器UI测试 增加ToolBar和侧滑菜单 | CalculatorDrawerLayout
  侧滑测试 | DrawLayoutTest
  旋转屏幕载入不同Layout布局 | RotateTest
