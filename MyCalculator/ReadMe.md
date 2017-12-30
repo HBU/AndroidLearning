@@ -4,7 +4,8 @@
 - 增加了Toast、Dialog的使用。
 - 学习并增加了ToolBar，DrawerLayout。    
 - Ref：郭霖《第一行代码（第2版）》。
-- 1.0版本 2017.12.30 制作完毕。
+- 版本1.0 
+- 2017.12.30
 
 ![](https://github.com/HBU/AndroidTest/blob/master/MyCalculator/1.png)
 ![](https://github.com/HBU/AndroidTest/blob/master/MyCalculator/2.png)
