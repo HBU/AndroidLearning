@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_call"
+            android:icon="@android:drawable/ic_menu_call"
+            android:title="学院电话" />
+        <item
+            android:id="@+id/nav_index"
+            android:icon="?android:attr/actionModeFindDrawable"
+            android:title="学院主页" />
+        <item
+            android:id="@+id/nav_introduce"
+            android:icon="@android:drawable/btn_star_big_on"
+            android:title="工作动态" />
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@android:drawable/sym_action_email"
+            android:title="学院新闻" />
+        <item
+            android:id="@+id/nav_university"
+            android:icon="@android:drawable/ic_popup_reminder"
+            android:title="学校主页" />
+    </group>
+</menu>
