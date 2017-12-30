@@ -4,22 +4,22 @@
         <item
             android:id="@+id/nav_call"
             android:icon="@drawable/ic_backup"
-            android:title="Call" />
+            android:title="学院电话" />
         <item
-            android:id="@+id/nav_friends"
+            android:id="@+id/nav_index"
             android:icon="@drawable/ic_delete"
-            android:title="Friends" />
+            android:title="学院主页" />
         <item
-            android:id="@+id/nav_location"
+            android:id="@+id/nav_introduce"
             android:icon="@drawable/ic_settings"
-            android:title="Location" />
+            android:title="工作动态" />
         <item
-            android:id="@+id/nav_mail"
+            android:id="@+id/nav_news"
             android:icon="@drawable/ic_settings"
-            android:title="Mail" />
+            android:title="学院新闻" />
         <item
-            android:id="@+id/nav_task"
+            android:id="@+id/nav_university"
             android:icon="@drawable/ic_settings"
-            android:title="Tasks" />
+            android:title="学校主页" />
     </group>
 </menu>

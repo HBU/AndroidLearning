@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="DrawLayout Learning"
+        android:text="网络空间安全与计算机学院"
         android:textColor="#FFF"
         android:textSize="14sp" />
 
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/username"
-        android:text="David Wei"
+        android:text="河北大学"
         android:textColor="#FFF"
         android:textSize="14sp" />
 
