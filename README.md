@@ -3,6 +3,7 @@
  学习内容 | 项目名称
  -------- | -----------
  ----- 2018 ----- | -----
+ ----- 2017 ----- | [年终总结](https://github.com/HBU/AndroidLearning/blob/master/MyCalculator/ReadMe.md)
  【计算器1.0】发布 | MyCalculator
 [底部导航栏](https://github.com/paranoia0618/FragmentPageAdapter) | FragmentPageAdapter
  计算器UI 增加ToolBar和侧滑菜单 | CalculatorDrawerLayout
