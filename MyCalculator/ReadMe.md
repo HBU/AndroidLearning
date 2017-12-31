@@ -6,7 +6,9 @@
 - Ref：郭霖《第一行代码（第2版）》。
 - 版本1.0 
 - 2017.12.30
-
+# UI
+![](https://github.com/HBU/AndroidTest/blob/master/MyCalculator/ezgif-4-f8133d4af0.gif)
+# UI截图
 ![](https://github.com/HBU/AndroidTest/blob/master/MyCalculator/1.png)
 ![](https://github.com/HBU/AndroidTest/blob/master/MyCalculator/2.png)
 ![](https://github.com/HBU/AndroidTest/blob/master/MyCalculator/3.png)
