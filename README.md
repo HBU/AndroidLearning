@@ -2,7 +2,7 @@
  
  学习内容 | 项目名称
  -------- | -----------
- 2018 | ---
+ ----- 2018 ----- | -----
  [底部导航栏](https://github.com/paranoia0618/FragmentPageAdapter) | FragmentPageAdapter
  【计算器1.0】发布 | MyCalculator
  计算器UI 增加ToolBar和侧滑菜单 | CalculatorDrawerLayout
