@@ -52,3 +52,7 @@
 1. 移动终端软件开发竞赛小组参加三个赛事，争取有所突破。
 2. 进一步修改PPT、Demo，提高教学质量。
 3. 争取做1-2个成熟产品，申请软件著作权。
+
+### 2011年末的学习成果
+![](https://github.com/HBU/AndroidTest/blob/master/MyCalculator/172732oebamwwb4wwjdje4.jpg)
+![](https://github.com/HBU/AndroidTest/blob/master/MyCalculator/164057qi0yy44s90i0x009.jpg)
