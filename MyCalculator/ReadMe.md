@@ -15,3 +15,10 @@
 ![](https://github.com/HBU/AndroidTest/blob/master/MyCalculator/4.png)
 ![](https://github.com/HBU/AndroidTest/blob/master/MyCalculator/5.png)
 ![](https://github.com/HBU/AndroidTest/blob/master/MyCalculator/6.png)
+
+# 后记
+## 2017.06.02
+接到2017秋学期“移动终端软件开发”开课任务。
+当晚搜索相关书籍，经过多方比较，购买郭霖《第一行代码（第2版）》。
+开始Android studio学习。
+---------------------------------------
