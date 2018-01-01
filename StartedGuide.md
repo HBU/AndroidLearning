@@ -20,5 +20,5 @@
 3. 其它文件在以后的学习中，慢慢的去了解。
 #### 第一个目标：简易计算器
 1. 了解Activity，完成[Activity生命周期Demo](https://github.com/HBU/AndroidDemo/tree/master/chapter04/ActivityLifeDemo)。
-2. 了解Layout布局，TextView、EditView、Button，在[activity_main.xml](https://github.com/HBU/AndroidDemo/blob/master/CalculatorDemo/app/src/main/res/layout/activity_main.xml)设计计算器UI。
-3. 在[MainActivity.java](https://github.com/HBU/AndroidDemo/blob/master/CalculatorDemo/app/src/main/java/com/example/calculatordemo/MainActivity.java)中编写代码，完成[简易计算器](https://github.com/HBU/AndroidDemo/tree/master/chapter05/CalculatorDemo)的制作。
+2. 了解Layout布局，TextView、EditView、Button，在[activity_main.xml](https://github.com/HBU/AndroidDemo/blob/master/chapter05/CalculatorDemo/app/src/main/res/layout/activity_main.xml)设计计算器UI。
+3. 在[MainActivity.java](https://github.com/HBU/AndroidDemo/blob/master/chapter05/CalculatorDemo/app/src/main/java/com/example/calculatordemo/MainActivity.java)中编写代码，完成[简易计算器](https://github.com/HBU/AndroidDemo/tree/master/chapter05/CalculatorDemo)的制作。
