@@ -9,3 +9,16 @@
 ## 学习方法
 - 读书了解原理，亲自敲一遍代码，感受过程。
 - 不要偷懒，复制、粘贴代码和认真敲一遍代码，收获是完全不同的。
+## 学习线路
+### 准备工作
+1. 了解Git，在GitHub建立自己的库，每次练习的代码都上传的库里面。可以记录学习的足迹，督促自己，慢慢的了解GitHub的更多功能。
+2. 安装Android studio ，了解开发环境。
+3. 新建工程Hello World，在模拟器和手机看运行结果。
+### 文件结构
+1. 初学者面对大量文件会有些懵，开始学习时，没有必要全部了解。
+2. 只关注MainActivity.java 和 activity_main.xml这两个文件就可以。
+3. 其它文件在以后的学习中，慢慢的去了解。
+### 第一个目标：简单计算器
+1. 了解Activity，完成Activity生命周期Demo。
+2. 了解Layout布局，TextView、EditView、Button，在activity_main.xml设计计算器UI。
+3. 在MainActivity.java中编写代码，完成简单计算器的制作。
