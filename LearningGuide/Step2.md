@@ -24,3 +24,4 @@
 把二、三所学知识融入到简易计算器，完成最终版计算器。
 #### 五.发布自己的第一个作品
 制作成.apk文件，并发布到qq群。
+参考学习：[Android Studio 打包Apk](https://www.jianshu.com/p/7e5b1bacc35c)
