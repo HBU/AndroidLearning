@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initView();
+        initView();// 设置按钮和监听
     }
 
     private void initView(){
@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(MainActivity.this,MyMusicService.class );
+            Intent intent = new Intent(MainActivity.this,MyMusicService.class );//连接服务
             switch ( v.getId() ) {
                 case R.id.play:
-                    startService(intent);
+                    startService(intent);//开启服务
                     break;
                 case R.id.stop:
-                    stopService(intent);
+                    stopService(intent);//关闭服务
                     break;
                 default:
                     break;

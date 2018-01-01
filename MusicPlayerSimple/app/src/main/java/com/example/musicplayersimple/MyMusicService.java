@@ -19,7 +19,7 @@ public class MyMusicService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        this.mediaPlayer = MediaPlayer.create( this, R.raw.despacio);
+        this.mediaPlayer = MediaPlayer.create( this, R.raw.despacio);//音乐文件资源路径
         this.mediaPlayer.start();
     }
 
