@@ -16,7 +16,7 @@
     4. 列表对话框
     5. 日期和时间对话框
 5. ListView
-#### er.初步了解MD（Material design）
+#### 二.初步了解MD（Material design）
 1. ToolBar 工具栏
 2. DrawerLayout 侧滑抽屉
 #### 三.把计算器做的更漂亮
