@@ -3,6 +3,7 @@
  学习内容 | 项目名称
  -------- | -----------
  学习指南 | [LearningGuide](https://github.com/HBU/AndroidLearning/tree/master/LearningGuide)
+ 音乐播放器学习 | MusicPlayer
  简易音乐播放器 | MusicPlayerSimple
  常用快捷键 | [ShortCutKeys](https://github.com/HBU/AndroidLearning/blob/master/ShortCutKeys.md)
  ----- 2018 ----- | -----
