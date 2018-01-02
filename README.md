@@ -3,6 +3,7 @@
  学习内容 | 项目名称
  -------- | -----------
  学习指南 | [LearningGuide](https://github.com/HBU/AndroidLearning/tree/master/LearningGuide)
+ 读取系统电话簿 | ContactsTest
  接收系统广播判断耳机拔插状态 | BroadcastOfSystem
  音乐播放器学习 | MusicPlayer
  简易音乐播放器 | MusicPlayerSimple
