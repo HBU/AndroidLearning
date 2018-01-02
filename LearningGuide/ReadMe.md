@@ -3,7 +3,7 @@
 Step01 | 入门指南  | Android studio & GitHub
 Step02 | UI       | 计算器
 Stpe03 | 服务     | 音乐播放器
-Stpe04 | 广播     | 
+Stpe04 | 广播     | 接收系统广播耳机插入拔出，播放器音乐暂停
 Stpe05 | 数据存储和提供器 | 
 Stpe06 | 网络通信编程　 | 
 Stpe07 | 进程与消息处理 | 
