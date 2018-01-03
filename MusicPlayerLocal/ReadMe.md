@@ -1,0 +1,2 @@
+- Ref：http://blog.csdn.net/i_do_can
+- 升级IDE环境：Android studio 3 ，gradle 4.1
