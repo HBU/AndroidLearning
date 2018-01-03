@@ -25,7 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
-
+//网络一班测试GitHub
 public class MainActivity extends AppCompatActivity {
 
     public Toolbar toolbar;             //顶部工具条

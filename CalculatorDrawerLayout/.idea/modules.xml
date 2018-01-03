@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CalculatorDrawerLayout.iml" filepath="$PROJECT_DIR$/CalculatorDrawerLayout.iml" />
-      <module fileurl="file://E:\GitHub\AndroidTest\CalculatorDrawerLayout\CalculatorDrawerLayout.iml" filepath="E:\GitHub\AndroidTest\CalculatorDrawerLayout\CalculatorDrawerLayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\GitHub\AndroidTest\CalculatorDrawerLayout\app\app.iml" filepath="E:\GitHub\AndroidTest\CalculatorDrawerLayout\app\app.iml" />
     </modules>
   </component>
 </project>
