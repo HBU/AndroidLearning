@@ -6,8 +6,9 @@
  数组-对象 嵌套的复杂JSON解析 | JSONtest
  读取系统电话簿 | ContactsTest
  接收系统广播判断耳机拔插状态 | BroadcastOfSystem
- 音乐播放器学习 | MusicPlayer
- 简易音乐播放器 | MusicPlayerSimple
+ 音乐播放器-专业 | MusicPlayer
+ 音乐播放器-普通 | MusicPlayerLocal
+ 音乐播放器-入门 | MusicPlayerSimple
  常用快捷键 | [ShortCutKeys](https://github.com/HBU/AndroidLearning/blob/master/ShortCutKeys.md)
  ----- 2018 ----- | -----
  ----- 2017 ----- | [年终总结](https://github.com/HBU/AndroidLearning/blob/master/MyCalculator/ReadMe.md)
