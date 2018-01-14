@@ -4,9 +4,10 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="45.0dip"
-        android:background="#ffcd2626" >
+        android:background="@color/colorPrimaryDark" >
         <TextView
             android:id="@+id/title_name"
             android:layout_width="match_parent"
@@ -31,6 +32,25 @@
             android:background="#A71717"
             android:gravity="center" />
     </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="北京"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="天津"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="保定"/>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
