@@ -1,7 +1,7 @@
 步骤 | 知识点 | 目标 | Demo
 ----- | ----- | ----- | -----
 Step01 | 入门指南  | Android studio & GitHub
-Step02 | UI+  Activity + Intent | 计算器 | ![DownLoad](https://github.com/HBU/AndroidLearning/tree/master/MyCalculator)
+Step02 | UI+  Activity + Intent | 计算器 | [DownLoad](https://github.com/HBU/AndroidLearning/tree/master/MyCalculator)
 Stpe03 | 服务service     | 音乐播放器（播放 暂停 停止） | ![DownLoad](https://github.com/HBU/AndroidLearning/tree/master/MusicPlayerSimple)
 Stpe04 | 广播broadcastreceiver     | 接收系统广播耳机插入拔出，提示用户 | ![DownLoad](https://github.com/HBU/AndroidLearning/tree/master/BroadcastOfSystem)
 Stpe05 | 内容提供器ContentProvider | 读取 本地电话本 | ![DownLoad](https://github.com/HBU/AndroidLearning/tree/master/ContactsTest)
