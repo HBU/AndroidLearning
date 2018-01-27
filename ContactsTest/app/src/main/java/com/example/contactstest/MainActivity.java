@@ -23,13 +23,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView contactsView = (ListView) findViewById(R.id.contacts_view);
-        adapter = new ArrayAdapter<String>(this, android.R.layout. simple_list_item_1, contactsList);
-        contactsView.setAdapter(adapter);
+        //使用ListView控件
+        ListView listView = (ListView) findViewById(R.id.contacts_view);
+        adapter = new ArrayAdapter<String>(this, android.R.layout. simple_list_item_1, contactsList);//适配器：simple_list_item_1（单行显示）
+        listView.setAdapter(adapter);
+        //申请权限
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{ Manifest.permission.READ_CONTACTS }, 1);
         } else {
-            readContacts();
+            readContacts();//调用 读联系人 函数
         }
     }
 
