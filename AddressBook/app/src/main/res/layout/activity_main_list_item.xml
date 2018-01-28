@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/activity_main_list_item_groupNum"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:paddingLeft="7dp"
+        android:text="@string/activity_main_list_item_groupNum"
+        android:textSize="12sp" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/activity_main_list_item_firstName"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/activity_main_list_item_firstName"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/activity_main_list_item_personName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/activity_main_list_item_personName"
+            android:textSize="15sp"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">真实数据通讯录</string>
+    <string name="activity_main_title">联系人</string>
+    <string name="activity_main_personNum">0</string>
+    <string name="activity_main_groupNum"></string>
+    <string name="activity_main_list_item_groupNum">C</string>
+    <string name="activity_main_list_item_firstName">陈</string>
+    <string name="activity_main_list_item_personName">陈敏</string>
+    <string name="activity_item_personName">陈敏</string>
+    <string name="activity_item_telephone">18785956254</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.leezp.test2.MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="30dp"
+        android:background="@color/title_gray">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/activity_main_title"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/activity_main_personNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_main_personNum"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_green"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/activity_main_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:scrollbars="none"
+            android:divider="@null">
+
+        </ListView>
+        
+        <TextView
+            android:id="@+id/activity_main_groupId"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:background="@color/translucent"
+            android:text="@string/activity_main_groupNum"
+            android:textSize="12sp"/>
+
+    </FrameLayout>
+
+</LinearLayout>
