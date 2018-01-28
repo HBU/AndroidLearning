@@ -5,7 +5,8 @@
  学习指南 | [LearningGuide](https://github.com/HBU/AndroidLearning/tree/master/LearningGuide)
  天气预报 | WeatherForecatDemo
  数组-对象 嵌套的复杂JSON解析 | JSONtest
- 读取系统电话簿 | ContactsTest
+ 读取系统电话簿-普通 | AddressBook
+ 读取系统电话簿-入门 | ContactsTest
  接收系统广播判断耳机拔插状态 | BroadcastOfSystem
  音乐播放器-专业 | MusicPlayer
  音乐播放器-普通 | MusicPlayerLocal
