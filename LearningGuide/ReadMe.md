@@ -4,10 +4,10 @@ Step01 | 入门指南  | Android studio & GitHub | 熟悉开发环境
        | Activity生命周期  | ActivityLifeDemo | [参考代码](https://github.com/HBU/AndroidDemo/tree/master/chapter04/ActivityLifeDemo)
        | Intent  | Intent | [参考代码](https://github.com/HBU/AndroidDemo/tree/master/chapter04/Intent)
        | UI  | Layout | [参考代码](https://github.com/HBU/AndroidDemo/tree/master/chapter05)
-       | UI  |  Toast Notification  | [参考代码](https://github.com/HBU/AndroidDemo/tree/master/chapter05)
+       | UI  | Toast Notification  | [参考代码](https://github.com/HBU/AndroidDemo/tree/master/chapter05)
        | UI  | Dialog Menu   | [参考代码](https://github.com/HBU/AndroidDemo/tree/master/chapter05)
        | UI  | Listview | [参考代码](https://github.com/HBU/AndroidDemo/tree/master/chapter05)      
-Step02 | UI +  Activity + Intent | 【计算器】 | 加、减、乘、除
+Step02 | 活动Activity | 【计算器】 | 加、减、乘、除
 Stpe03 | 服务service     | 【音乐播放器】 | 播放、暂停、停止
 Stpe04 | 广播broadcastreceiver| 【音乐播放器】增加提示 | 耳机插入拔出，提示用户
 Stpe05 | 内容提供器ContentProvider | 【电话簿】 | 读取手机电话簿
