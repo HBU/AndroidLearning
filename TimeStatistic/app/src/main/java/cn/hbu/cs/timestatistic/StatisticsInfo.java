@@ -95,7 +95,7 @@ public class StatisticsInfo {
 
     private void setResultList(Context context) {// Core code
         UsageStatsManager m = (UsageStatsManager)context.getSystemService(Context.USAGE_STATS_SERVICE);
-        this.AppInfoList = new ArrayList<>();// Useful ?
+        this.AppInfoList = new ArrayList<>();//
         if(m != null) {
             Calendar calendar = Calendar.getInstance();
             long now = calendar.getTimeInMillis();
@@ -103,33 +103,22 @@ public class StatisticsInfo {
 
             Log.d("David style:",style + "");
             if(style == DAY){
-                int interval = UsageStatsManager.INTERVAL_YEARLY;
-                Calendar calendar1 = Calendar.getInstance();
-                long endTime = calendar1.getTimeInMillis();
-                calendar1.add(Calendar.YEAR, -1);
-                long startTime = calendar1.getTimeInMillis();
-                Log.d("David Begin Time:",dateFormat.format(startTime)  + "");
-                Log.d("David Now   Time:",dateFormat.format(endTime) + "");
-                this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
-                Log.d("David Result:", "DAY");
+                Log.d("David Begin Time:",dateFormat.format(begintime)  + "");
+                Log.d("David Now Time:",dateFormat.format(now) + "");
+                this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, begintime, now);
             }
             else if(style == WEEK){
                 this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_WEEKLY,begintime, now);
-                Log.d("David :", "WEEK");
             }
             else if(style == MONTH){
                 this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_MONTHLY, begintime, now);
-                Log.d("David :", "Month");
             }
             else if(style == YEAR){
                 this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_YEARLY, begintime, now);
-                Log.d("David :", "Year");
             }
             else {
                 this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_BEST, begintime, now);
-                Log.d("David :", "DAY 2");
             }
-            Log.d("David result:",result + "");
         }
     }
 
@@ -170,7 +159,7 @@ public class StatisticsInfo {
         for(int i=0;i<result.size();i++) {
             long begintime;
             begintime = getBeginTime();
-            if(result.get(i).getFirstTimeStamp() > begintime) {
+            if(result.get(i).getLastTimeUsed() > begintime) { //Ref:https://github.com/Uyouii/Statistics/issues/1
                 int num = FoundUsageStats(Mergeresult, result.get(i));
                 if (num >= 0) {
                     UsageStats u = Mergeresult.get(num);

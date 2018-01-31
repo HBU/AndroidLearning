@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         textView =(TextView)findViewById(R.id.title);
         textView.setText("请设置权限！");
-        this.style = StatisticsInfo.DAY;//DAY is NULL ,Why ?
+        this.style = StatisticsInfo.DAY;//
         button = (Button)findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
