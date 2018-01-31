@@ -13,7 +13,9 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -38,9 +40,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         textView =(TextView)findViewById(R.id.title);
         textView.setText("请设置权限！");
-        this.style = StatisticsInfo.WEEK;//DAY is NULL ,Why ?
+        this.style = StatisticsInfo.DAY;//DAY is NULL ,Why ?
         button = (Button)findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,16 +63,19 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         try {
             if((isStatAccessPermissionSet(this))){
-                textView.setVisibility(View.INVISIBLE);
-                button.setVisibility(View.INVISIBLE);
+//                textView.setVisibility(View.INVISIBLE);
+//                button.setVisibility(View.INVISIBLE);
+                textView.setText("APP");
+                button.setText("Update");
             }
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
         List<Map<String,Object>> datalist = null;
-        StatisticsInfo statisticsInfo = new StatisticsInfo(this,this.style);
+        StatisticsInfo statisticsInfo = new StatisticsInfo(this,this.style);// Get info
         totalTime = statisticsInfo.getTotalTime();
         totalTimes = statisticsInfo.getTotalTimes();
+
         datalist = getDataList(statisticsInfo.getShowList());
 
         ListView listView = (ListView)findViewById(R.id.AppStatisticsList);

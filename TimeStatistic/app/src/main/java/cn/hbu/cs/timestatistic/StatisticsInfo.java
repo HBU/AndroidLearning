@@ -4,15 +4,20 @@ import android.annotation.TargetApi;
 import android.app.usage.UsageStats;
 import android.app.usage.UsageStatsManager;
 import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.text.format.DateUtils;
+import android.util.Log;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Map;
 
 public class StatisticsInfo {
-
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("M-d-yyyy HH:mm:ss");
     final public static int DAY = 0;
     final public static int WEEK = 1;
     final public static int MONTH = 2;
@@ -38,18 +43,19 @@ public class StatisticsInfo {
     //将次数和时间为0的应用信息过滤掉
     private void setShowList() {
         this.ShowList = new ArrayList<>();
-
         totalTime = 0;
-
+        Log.d("David AppInfoList.size:",AppInfoList.size() + "");
         for(int i=0;i<AppInfoList.size();i++) {
-            if(AppInfoList.get(i).getUsedTimebyDay() > 0 ) { //&& AppInfoList.get(i).getTimes() > 0) {
 
+            if(AppInfoList.get(i).getUsedTimebyDay() >= 0 ) { //&& AppInfoList.get(i).getTimes() > 0) {
                 this.ShowList.add(AppInfoList.get(i));
                 totalTime += AppInfoList.get(i).getUsedTimebyDay();
                 totalTimes += AppInfoList.get(i).getTimes();
+                Log.d("David getUsedTimebyDay",AppInfoList.get(i).getUsedTimebyDay() + "");
             }
         }
-
+        Log.d("David totalTime:",totalTime + "");
+        Log.d("David totalTimes:",totalTimes + "");
         //将显示列表中的应用按显示顺序排序
         for(int i = 0;i<this.ShowList.size() - 1;i++) {
             for(int j = 0; j< this.ShowList.size() - i - 1; j++) {
@@ -64,49 +70,66 @@ public class StatisticsInfo {
 
 
     //统计当天的应用使用时间
-
     private void setUsageStatsList(Context context) throws NoSuchFieldException {
+        Log.d("David","setUsageStatsList");
         Calendar calendar = Calendar.getInstance();
         long now = calendar.getTimeInMillis();
-        setResultList(context);
+        setResultList(context);// Get Stats service infomation
         List<UsageStats> Mergeresult = MergeList(this.result);
-
         for(UsageStats usageStats:Mergeresult) {
             this.AppInfoList.add(new AppInformation(usageStats , context));
         }
         for(AppInformation appInformation : this.AppInfoList) {
             if(appInformation.getUsedTimebyDay() > 0) {
-                System.out.println("packagename " + appInformation.getPackageName());
-                System.out.println("label: " + appInformation.getLabel());
-                System.out.println("time: " + DateUtils.formatElapsedTime(appInformation.getUsedTimebyDay() / 1000 ));
-                System.out.println("Times: " + appInformation.getTimes());
-                System.out.println("firstTimeStmp: " + DateUtils.formatElapsedTime((now - appInformation.getUsageStats().getFirstTimeStamp()) / 1000));
-                System.out.println("lastTimeStmp: " + DateUtils.formatElapsedTime((now- appInformation.getUsageStats().getLastTimeStamp()) / 1000));
-                System.out.println("lastTimeUsed: " + DateUtils.formatElapsedTime((now - appInformation.getUsageStats().getLastTimeUsed() )/ 1000));
-
+                Log.d("David packagename:",appInformation.getPackageName() + "");
+                Log.d("David label:",appInformation.getLabel() + "");
+                Log.d("David time:",DateUtils.formatElapsedTime(appInformation.getUsedTimebyDay() / 1000 ) + "");
+                Log.d("David Times:",appInformation.getTimes() + "");
+                Log.d("David firstTimeStmp:",DateUtils.formatElapsedTime((now - appInformation.getUsageStats().getFirstTimeStamp()) / 1000) + "");
+                Log.d("David lastTimeStmp:",DateUtils.formatElapsedTime((now- appInformation.getUsageStats().getLastTimeStamp()) / 1000) + "");
+                Log.d("David lastTimeUsed:",DateUtils.formatElapsedTime((now - appInformation.getUsageStats().getLastTimeUsed() )/ 1000) + "");
                 //String info = appInformation.getLabel() +  " " + DateUtils.formatElapsedTime(appInformation.getUsedTimebyDay() / 1000 );
             }
         }
     }
 
-    private void setResultList(Context context) {
+    private void setResultList(Context context) {// Core code
         UsageStatsManager m = (UsageStatsManager)context.getSystemService(Context.USAGE_STATS_SERVICE);
-        this.AppInfoList = new ArrayList<>();
+        this.AppInfoList = new ArrayList<>();// Useful ?
         if(m != null) {
             Calendar calendar = Calendar.getInstance();
             long now = calendar.getTimeInMillis();
             long begintime = getBeginTime();
-            if(style == DAY)
-                this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_BEST, begintime, now);
-            else if(style == WEEK)
+
+            Log.d("David style:",style + "");
+            if(style == DAY){
+                int interval = UsageStatsManager.INTERVAL_YEARLY;
+                Calendar calendar1 = Calendar.getInstance();
+                long endTime = calendar1.getTimeInMillis();
+                calendar1.add(Calendar.YEAR, -1);
+                long startTime = calendar1.getTimeInMillis();
+                Log.d("David Begin Time:",dateFormat.format(startTime)  + "");
+                Log.d("David Now   Time:",dateFormat.format(endTime) + "");
+                this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
+                Log.d("David Result:", "DAY");
+            }
+            else if(style == WEEK){
                 this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_WEEKLY,begintime, now);
-            else if(style == MONTH)
+                Log.d("David :", "WEEK");
+            }
+            else if(style == MONTH){
                 this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_MONTHLY, begintime, now);
-            else if(style == YEAR)
+                Log.d("David :", "Month");
+            }
+            else if(style == YEAR){
                 this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_YEARLY, begintime, now);
+                Log.d("David :", "Year");
+            }
             else {
                 this.result = m.queryUsageStats(UsageStatsManager.INTERVAL_BEST, begintime, now);
+                Log.d("David :", "DAY 2");
             }
+            Log.d("David result:",result + "");
         }
     }
 
@@ -138,19 +161,15 @@ public class StatisticsInfo {
             calendar.add(Calendar.HOUR, -1 * hour);
 
             begintime = calendar.getTimeInMillis();
-
         }
         return begintime;
     }
 
     private List<UsageStats> MergeList(List<UsageStats> result) {
         List<UsageStats> Mergeresult = new ArrayList<>();
-
         for(int i=0;i<result.size();i++) {
-
             long begintime;
             begintime = getBeginTime();
-
             if(result.get(i).getFirstTimeStamp() > begintime) {
                 int num = FoundUsageStats(Mergeresult, result.get(i));
                 if (num >= 0) {
