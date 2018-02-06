@@ -17,8 +17,10 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private int style;
     private long totalTime;
     private int totalTimes;
+    private RadioButton RbDay,RbWeek,RbMonth,RbYear;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +46,14 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         textView =(TextView)findViewById(R.id.title);
         textView.setText("请设置权限！");
-        this.style = StatisticsInfo.DAY;//
         button = (Button)findViewById(R.id.button);
+        button.setText("设置");
+        RbDay = (RadioButton)findViewById(R.id.RbDay);
+        RbWeek = (RadioButton)findViewById(R.id.RbWeek);
+        RbMonth = (RadioButton)findViewById(R.id.RbMonth);
+        RbYear = (RadioButton)findViewById(R.id.RbYear);
+        RbDay.setChecked(true);
+        style = StatisticsInfo.DAY;//
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,21 +61,61 @@ public class MainActivity extends AppCompatActivity {
                     if(!isStatAccessPermissionSet(MainActivity.this)) {
                         startActivity(new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS));   //查看是否为应用设置了权限
                     }
+                    else {
+//                        Toast.makeText(MainActivity.this,"Test",Toast.LENGTH_SHORT).show();
+                    }
                 } catch (PackageManager.NameNotFoundException e) {
                     e.printStackTrace();
                 }
             }
         });
+        RbDay.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    style = StatisticsInfo.DAY;
+                    onResume();
+                }
+            }
+        });
+        RbWeek.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    style = StatisticsInfo.WEEK;
+                    onResume();
+                }
+            }
+        });
+        RbMonth.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    style = StatisticsInfo.MONTH;
+                    onResume();
+                }
+            }
+        });
+        RbYear.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    style = StatisticsInfo.YEAR;
+                    onResume();
+                }
+            }
+        });
+
     }
     @Override
     protected void onResume() {
         super.onResume();
         try {
             if((isStatAccessPermissionSet(this))){
-//                textView.setVisibility(View.INVISIBLE);
-//                button.setVisibility(View.INVISIBLE);
-                textView.setText("APP");
-                button.setText("Update");
+                textView.setVisibility(View.INVISIBLE);
+                button.setVisibility(View.INVISIBLE);
+//                textView.setText("APP使用情况");
+//                button.setText("更新");
             }
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
@@ -103,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         map.put("label","全部应用");
         map.put("info","运行时间: " + DateUtils.formatElapsedTime(totalTime / 1000));
         map.put("times","本次开机操作次数: " + totalTimes);
-        map.put("icon",R.drawable.use);
+        map.put("icon",R.drawable.cat_normal);
         dataList.add(map);
 
         for(AppInformation appInformation : ShowList) {

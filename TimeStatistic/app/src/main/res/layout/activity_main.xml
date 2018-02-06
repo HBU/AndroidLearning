@@ -10,13 +10,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <RadioButton
+                android:id="@+id/RbDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日" />
+            <RadioButton
+                android:id="@+id/RbWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="周" />
+            <RadioButton
+                android:id="@+id/RbMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="月" />
+            <RadioButton
+                android:id="@+id/RbYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年" />
+        </RadioGroup>
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="INFOMATION"
+            android:gravity="center_vertical"
             />
-
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"

@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AddressBook.iml" filepath="$PROJECT_DIR$/AddressBook.iml" />
+      <module fileurl="file://C:\GitHub\AndroidLearning\AddressBook\AddressBook.iml" filepath="C:\GitHub\AndroidLearning\AddressBook\AddressBook.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\GitHub\AndroidLearning\AddressBook\app\app.iml" filepath="C:\GitHub\AndroidLearning\AddressBook\app\app.iml" />
     </modules>
   </component>
 </project>
