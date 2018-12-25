@@ -17,10 +17,12 @@ public class DBUtil
         {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:jtds:sqlserver://" + ip + ":1433/" + db + ";charset=utf8", user, pwd);
-        } catch (ClassNotFoundException e)
+        }
+        catch (ClassNotFoundException e)
         {
             e.printStackTrace();
-        } catch (SQLException e)
+        }
+        catch (SQLException e)
         {
             e.printStackTrace();
         }
@@ -48,7 +50,8 @@ public class DBUtil
             rs.close();
             stmt.close();
             conn.close();
-        } catch (SQLException e)
+        }
+        catch (SQLException e)
         {
             e.printStackTrace();
             result += "查询数据异常!" + e.getMessage();
