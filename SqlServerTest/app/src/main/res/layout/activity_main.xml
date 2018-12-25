@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
+        android:id="@+id/title1"
+        android:text="SQL Server 数据读取"/>
+    <Button
+        android:id="@+id/btnTestSql"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title1"
+        android:text="@string/testSQL"/>
+    <Button
+        android:id="@+id/btnClean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnTestSql"
+        android:text="@string/clean"/>
+    <TextView
+        android:id="@+id/tvTestResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnClean"
+        android:text="Waiting" />
+
+</RelativeLayout>
