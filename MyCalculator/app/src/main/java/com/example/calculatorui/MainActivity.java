@@ -4,13 +4,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,25 +30,26 @@ public class MainActivity extends AppCompatActivity {
     public DrawerLayout mDrawerLayout;  //左侧抽屉
     private EditText editText;          //输入框：用于输入数字
     private String operator;            //操作符：记录 + - * / 符号
-    private double n1 , n2 ,Result;     //操作数：操作符两端的数字，n1为左操作数，n2为右操作数。
+    private double n1 , n2 , Result;     //操作数：操作符两端的数字，n1为左操作数，n2为右操作数。
     private TextView textView;          //文本框：显示计算过程和计算结果
     private Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn0;   //按钮：十个数字
     private Button btnPlus,btnMinus,btnMultiply,btnDivide;              //按钮：加减乘除
     private Button btnPoint,btnEqual,btnClear;                          //按钮：小数点，等号，清空
     private Button buttonPlusMinus;     //按钮：正负号
     private Button buttonPercent;       //按钮：百分号
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FindViewById();
         ButtonClickListener();
         editText.setFocusable(false);
         editText.setFocusableInTouchMode(false);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        NavigationView navView = (NavigationView) findViewById(R.id.nav_view);
+        mDrawerLayout =  findViewById(R.id.drawer_layout);
+        NavigationView navView =  findViewById(R.id.nav_view);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
@@ -167,28 +166,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void FindViewById()    {
-        editText = (EditText)findViewById(R.id.editviewdavid);//与XML中定义好的EditText控件绑定
-        textView = (TextView)findViewById(R.id.textviewdavid);//与XML中定义好的TextView控件绑定
+        editText = findViewById(R.id.editviewdavid);//与XML中定义好的EditText控件绑定
+        textView = findViewById(R.id.textviewdavid);//与XML中定义好的TextView控件绑定
         editText.setCursorVisible(false);//隐藏输入框光标
-        btn1 = (Button) findViewById(R.id.button1);
-        btn2 = (Button) findViewById(R.id.button2);
-        btn3 = (Button) findViewById(R.id.button3);
-        btn4 = (Button) findViewById(R.id.button4);
-        btn5 = (Button) findViewById(R.id.button5);
-        btn6 = (Button) findViewById(R.id.button6);
-        btn7 = (Button) findViewById(R.id.button7);
-        btn8 = (Button) findViewById(R.id.button8);
-        btn9 = (Button) findViewById(R.id.button9);
-        btn0 = (Button) findViewById(R.id.button0);
-        btnPlus = (Button) findViewById(R.id.buttonPlus);
-        btnMinus = (Button) findViewById(R.id.buttonMinus);
-        btnMultiply = (Button) findViewById(R.id.buttonMultiply);
-        btnDivide = (Button) findViewById(R.id.buttonDivide);
-        btnPoint = (Button) findViewById(R.id.buttonPoint);
-        btnEqual = (Button) findViewById(R.id.buttonEqual);
-        btnClear = (Button) findViewById(R.id.buttonClear);
-        buttonPlusMinus = (Button)findViewById(R.id.PlusMinus);
-        buttonPercent = (Button)findViewById(R.id.buttonPercent);
+        btn1 =  findViewById(R.id.button1);
+        btn2 =  findViewById(R.id.button2);
+        btn3 =  findViewById(R.id.button3);
+        btn4 =  findViewById(R.id.button4);
+        btn5 =  findViewById(R.id.button5);
+        btn6 =  findViewById(R.id.button6);
+        btn7 =  findViewById(R.id.button7);
+        btn8 =  findViewById(R.id.button8);
+        btn9 =  findViewById(R.id.button9);
+        btn0 =  findViewById(R.id.button0);
+        btnPlus =  findViewById(R.id.buttonPlus);
+        btnMinus =  findViewById(R.id.buttonMinus);
+        btnMultiply =  findViewById(R.id.buttonMultiply);
+        btnDivide =  findViewById(R.id.buttonDivide);
+        btnPoint =  findViewById(R.id.buttonPoint);
+        btnEqual = findViewById(R.id.buttonEqual);
+        btnClear =  findViewById(R.id.buttonClear);
+        buttonPlusMinus = findViewById(R.id.PlusMinus);
+        buttonPercent = findViewById(R.id.buttonPercent);
     }
 
     void ButtonClickListener(){
@@ -415,7 +414,10 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         break;
                 }
-            }catch(Exception e){}
+            }
+            catch(Exception e){
+
+            }
         }
     };
 }
