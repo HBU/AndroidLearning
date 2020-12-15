@@ -45,6 +45,9 @@ import android.support.v7.app.AppCompatActivity;
 //Ref:http://blog.csdn.net/i_do_can
 // Edit by David 2018.1.4
 // android studio 3.0.1 ,Gradle 4.1
+// Edit by David 2020.12.9
+// android studio 4.1.1 ,Gradle 6.5
+
 public class MusicActivity extends AppCompatActivity {
 
     private ListView musicListView = null;
